@@ -355,9 +355,6 @@ To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/save-cs1/index.js %}
-{% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/spreadsheet/save-cs1/index.html %}
 {% endhighlight %}
