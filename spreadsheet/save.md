@@ -41,9 +41,6 @@ The following code example shows `Save` option in the Spreadsheet control.
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/save-cs2/index.js %}
-{% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/spreadsheet/save-cs2/index.html %}
 {% endhighlight %}
