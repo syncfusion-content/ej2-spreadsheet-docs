@@ -65,7 +65,7 @@ Refer to the following code to find Spreadsheet's script and style file location
 
 After copying the files, then you can refer the Spreadsheet's scripts and styles into the `index.html` file. The following html code example shows the minimal dependency of Spreadsheet.
 
-```
+```html
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
        <head>
@@ -130,7 +130,7 @@ Refer to the Spreadsheet's CDN links as follows.
 
 The following HTML code example shows the minimal dependency of Spreadsheet.
 
-```
+```html
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
        <head>
@@ -188,7 +188,7 @@ The following HTML code example shows the minimal dependency of Spreadsheet.
 
 Now, you can start adding Spreadsheet control in the application. For getting started, add a `div` element for Spreadsheet control in `index.html`. Then, refer the `index.js` file into the `index.html` file.
 
-```
+```html
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
        <head>

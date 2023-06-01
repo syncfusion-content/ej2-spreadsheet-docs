@@ -100,7 +100,7 @@ Add the HTML `div` element with ID attribute as `element` in your `index.html` f
 
 `[src/index.html]`
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
