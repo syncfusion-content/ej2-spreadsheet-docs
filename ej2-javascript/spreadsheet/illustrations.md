@@ -141,6 +141,34 @@ The available arguments in the `ChartModel` are:
 * isSeriesInRows: Specifies to switch the row or a column.
 * range: Specifies the selected range or specified range.
 * id: Specifies the chart element id.
+* markerSettings: Specifies the Line Chart marker settings.
+
+{% if page.publishingplatform == "typescript" %}
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/chart-cs2/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/chart-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/chart-cs2" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/chart-cs2/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/chart-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/spreadsheet/chart-cs2" %}
+{% endif %}
 
 ### Delete Chart
 
@@ -186,6 +214,37 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/spreadsheet/chart-cs1" %}
+{% endif %}
+
+#### Customization of Line Chart Markers
+
+Using the [`actionBegin`](../api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker.
+
+{% if page.publishingplatform == "typescript" %}
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/chart-cs3/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/chart-cs3/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/chart-cs3" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/chart-cs3/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/chart-cs3/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/spreadsheet/chart-cs3" %}
 {% endif %}
 
 ### Limitations of Chart
