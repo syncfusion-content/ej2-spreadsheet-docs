@@ -112,7 +112,7 @@ The keyboard shortcuts supported in the spreadsheet are,
 | Left | Move the focus to the previous items in the ribbon content. |
 | Right | Move the focus to the next items in the ribbon content. |
 | Alt + Down | Open the ribbon dropdown menu. |
-| Esc or Alt + Up | Close the ribbon dropdown menu. |
+| Esc / Alt + Up | Close the ribbon dropdown menu. |
 
 ## See Also
 
