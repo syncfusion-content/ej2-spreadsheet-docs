@@ -32,7 +32,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
              spreadsheet.merge('A1:F1');
     },
     actionBegin: (args) => {
-        if (args.action === 'beforeInsertChart' && args.type.includes('Line')) {
+        if (args.action === 'beforeInsertChart' && args.args.eventArgs.type.includes('Line')) {
             args.args.eventArgs.markerSettings.shape = 'Triangle';
             args.args.eventArgs.markerSettings.isFilled = false;
             args.args.eventArgs.markerSettings.size = 10;
