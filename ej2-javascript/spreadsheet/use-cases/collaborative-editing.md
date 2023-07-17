@@ -174,6 +174,68 @@ spreadsheet.appendTo('#spreadsheet');
 
 ```
 
+## Perform import action for collaborative clients
+
+Using the `action` argument from the `actionComplete` event, you can identity whether the import action is performed or not. If the action is `import`, then you need to send the `response data` to the server and also update the same to the collaborative clients.
+
+The following code example shows how to perform the import functionality for collaborative clients.
+
+```ts
+import { Spreadsheet, CollaborativeEditArgs } from '@syncfusion/ej2-spreadsheet';
+import * as signalR from '@microsoft/signalr';
+import { isNullOrUndefined } from "@syncfusion/ej2-base";
+
+// For signalR Hub connection
+const connection: signalR.HubConnection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', { // localhost from AspNetCore service
+    skipNegotiation: true,
+    transport: signalR.HttpTransportType.WebSockets
+}).build();
+
+//Initialize the SpreadSheet control
+let spreadsheet: Spreadsheet = new Spreadsheet({
+    sheets: [{
+        columns: [{ width: 130 }, { width: 110 }, { width: 110 },
+        { width: 90 }, { width: 90 }, { width: 90 }, { width: 90 }, { width: 90 }]
+    }],
+    openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+    actionComplete: (args: any) => {
+        if (args.action === 'import') {
+            // Send the action data to the server in args.response at the time of importing an excel file.
+            connection.send("BroadcastData", JSON.stringify(args.response.data));
+        }
+        else {
+            // Send the action data to the server for other than import actions.
+            connection.send("BroadcastData", JSON.stringify(args));
+        }
+    },
+});
+
+spreadsheet.appendTo('#spreadsheet');
+
+connection.on('dataReceived', (data: string) => {
+    const model: CollaborativeEditArgs = JSON.parse(
+        data
+    ) as CollaborativeEditArgs;
+
+    // Condition to check whether action performed is import.
+    if (isNullOrUndefined(model['action'])) {
+        // Load the imported excel file data as JSON to the connected clients.
+        const jsonData: object = { Workbook: model };
+        spreadsheet.openFromJson({ file: jsonData });
+    }
+    else {
+        // Update the action details to the connected clients.
+        spreadsheet.updateAction(model);
+    }
+});
+connection
+    .start()
+    .then(() => { // to start the server.
+        console.log('server connected!!!');
+    })
+    .catch(err => console.log(err));
+```
+
 ## See Also
 
 * [Filtering](./filter)
