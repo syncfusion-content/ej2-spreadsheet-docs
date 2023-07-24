@@ -22,7 +22,7 @@ class CustomAdaptor extends ODataAdaptor {
     //Initialize DataManager
     let data: DataManager = new DataManager({
         //Remote service url
-        url: 'https://ej2services.syncfusion.com/production/web-services/api/Orders',
+        url:  'https://services.syncfusion.com/js/production/api/Orders',
         adaptor: new CustomAdaptor,
         crossDomain: true
     });

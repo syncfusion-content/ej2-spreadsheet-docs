@@ -193,10 +193,6 @@ const connection: signalR.HubConnection = new signalR.HubConnectionBuilder().wit
 
 //Initialize the SpreadSheet control
 let spreadsheet: Spreadsheet = new Spreadsheet({
-    sheets: [{
-        columns: [{ width: 130 }, { width: 110 }, { width: 110 },
-        { width: 90 }, { width: 90 }, { width: 90 }, { width: 90 }, { width: 90 }]
-    }],
     openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
     actionComplete: (args: any) => {
         if (args.action === 'import') {

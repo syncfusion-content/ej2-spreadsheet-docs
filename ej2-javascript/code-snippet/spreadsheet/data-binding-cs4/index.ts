@@ -6,7 +6,7 @@ import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 
 //Initialize DataManager
 let data: DataManager = new DataManager({
-    url: 'https://ej2services.syncfusion.com/production/web-services/api/Orders',
+    url:  'https://services.syncfusion.com/js/production/api/Orders',
     crossDomain: true,
     adaptor: new WebApiAdaptor()
 });
