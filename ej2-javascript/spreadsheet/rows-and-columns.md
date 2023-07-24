@@ -275,7 +275,7 @@ The following code example shows how to change the width for single/multiple col
 
 ## Modify the column header's text
 
-You can modify the column header text using the `beforeCellRender` event. Check whether he fetched cell is `headerCell` and modify its `innerHTML` with the modified user-defined text.
+You can change the column header's text using the `beforeCellRender` event. And check whether the rendered cell is `headerCell` using `e-header-cell` class and modify its `innerHTML` based on the user-defined text.
 
 The following code example shows how to modify the column header's text in the spreadsheet.
 
