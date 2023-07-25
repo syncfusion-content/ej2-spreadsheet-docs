@@ -176,6 +176,6 @@ spreadsheet.appendTo('#spreadsheet');
 
 ## See Also
 
-* [Filtering](./filter)
-* [Sorting](./sort)
-* [Hyperlink](./link)
+* [Filtering](../filter)
+* [Sorting](../sort)
+* [Hyperlink](../link)
