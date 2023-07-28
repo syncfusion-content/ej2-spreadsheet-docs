@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 ## Set an imported excel file's active sheet in ##Platform_Name## Spreadsheet control
 
-You can change the active sheet of imported file by updating [`activeSheetIndex`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#activesheetindex) property on the [`openComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#opencomplete) event.
+You can change the active sheet of imported file by updating [`activeSheetIndex`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#activesheetindex) property on the [`openComplete`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#opencomplete) event.
 
 The code sample below demonstrates how to set the active sheet when importing an Excel file.
 
