@@ -235,7 +235,7 @@ The following code example shows how to change the height for single/multiple ro
 
 ### Column
 
-You can change the width of single or multiple columns by using the [setColumnsWidth](.../api/spreadsheet/#setcolumnswidth) method.
+You can change the width of single or multiple columns by using the [setColumnsWidth](../api/spreadsheet/#setcolumnswidth) method.
 
 You can provide the following type of ranges to the method:
 
