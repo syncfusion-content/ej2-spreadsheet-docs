@@ -4,7 +4,7 @@ var query = new ej.data.Query().select([
 
     //Initialize DataManager.
     var data = new ej.data.DataManager({
-        url:  'https://ej2services.syncfusion.com/production/web-services/api/Orders',
+        url:  'https://services.syncfusion.com/js/production/api/Orders',
         crossDomain: true
     });
 
