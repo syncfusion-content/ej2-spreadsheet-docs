@@ -194,7 +194,7 @@ const connection: signalR.HubConnection = new signalR.HubConnectionBuilder().wit
 //Initialize the SpreadSheet control
 let spreadsheet: Spreadsheet = new Spreadsheet({
     openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
-    actionComplete: (args: any) => {
+    actionComplete: (args: {action: string, response: any}) => {
         if (args.action === 'import') {
             // Send the action data to the server in args.response at the time of importing an excel file.
             connection.send("BroadcastData", JSON.stringify(args.response.data));
