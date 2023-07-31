@@ -4,7 +4,7 @@ var query = new ej.data.Query().select([
 
     //Initialize DataManager.
     var data = new ej.data.DataManager({
-        url:  'https://services.odata.org/V4/Northwind/Northwind.svc',
+        url:  'https://ej2services.syncfusion.com/production/web-services/api/Orders',
         crossDomain: true
     });
 
