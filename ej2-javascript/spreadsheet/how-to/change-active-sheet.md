@@ -35,7 +35,7 @@ The code sample below demonstrates how to set the active sheet when importing an
 {% include code-snippet/spreadsheet/change-active-sheet-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/jchange-active-sheet-cs1/index.html %}
+{% include code-snippet/spreadsheet/change-active-sheet-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
