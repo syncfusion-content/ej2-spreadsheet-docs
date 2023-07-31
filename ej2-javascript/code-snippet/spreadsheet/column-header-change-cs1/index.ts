@@ -11,7 +11,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
         args.element.classList.contains('e-header-cell')
       ) {
         let text: string = 'custom header ' + args.colIndex.toString();
-        args.element.innerHTML = text;
+        args.element.innerText = text;
       }
     }
   });

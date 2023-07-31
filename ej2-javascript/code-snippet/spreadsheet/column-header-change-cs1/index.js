@@ -8,7 +8,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
           args.element.classList.contains('e-header-cell')
         ) {
           let text = 'custom header ' + args.colIndex.toString();
-          args.element.innerHTML = text;
+          args.element.innerText = text;
         }
     },
 });

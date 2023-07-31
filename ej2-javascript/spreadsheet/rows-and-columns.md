@@ -273,11 +273,11 @@ The following code example shows how to change the width for single/multiple col
 {% previewsample "page.domainurl/code-snippet/spreadsheet/column-width-cs1" %}
 {% endif %}
 
-## Modify the column header's text
+## Change the text in the column headers
 
-You can change the column header's text using the `beforeCellRender` event. And check whether the rendered cell is `headerCell` using `e-header-cell` class and modify its `innerHTML` based on the user-defined text.
+Using the `beforeCellRender` event, you can change the text in the column headers. In that event, you can use the `e-header-cell` class to identify the header cell element and update its text value.
 
-The following code example shows how to modify the column header's text in the spreadsheet.
+The following code example shows how to change the text in the column headers.
 
 {% if page.publishingplatform == "typescript" %}
 
