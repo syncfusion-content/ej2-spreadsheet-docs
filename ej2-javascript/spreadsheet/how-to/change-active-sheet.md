@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 You can change the active sheet of imported file by updating [`activeSheetIndex`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#activesheetindex) property on the [`openComplete`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#opencomplete) event.
 
-The code sample below demonstrates how to set the active sheet when importing an Excel file.
+The following code example shows how to set the active sheet when importing an Excel file.
 
 {% if page.publishingplatform == "typescript" %}
 
