@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set an imported excel file's active sheet in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Set an imported excel file's active sheet in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+description: Learn here all about set an imported excel file's active sheet in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
 control: Change the active sheet in the imported Excel file 
 publishingplatform: ##Platform_Name##
