@@ -1,8 +1,6 @@
 ej.base.enableRipple(true);
 
-
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
-    allowOpen: true,
     openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
     saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
     openComplete: function() {
@@ -13,4 +11,3 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
 });
 
 spreadsheet.appendTo('#spreadsheet');
-
