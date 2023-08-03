@@ -1,16 +1,13 @@
-
-
-
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
 
-//Initialize DataManager
+//Initialize DataManager.
 let data: DataManager = new DataManager({
-  url:  'https://services.syncfusion.com/js/production/api/Orders',
+  url: 'https://services.syncfusion.com/js/production/api/Orders',
   adaptor: new ODataAdaptor(),
   crossDomain: true
 });
-//Initialize Spreadsheet control
+
 let spreadsheet: Spreadsheet = new Spreadsheet({
   sheets: [
     {
@@ -32,13 +29,10 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
     }
   ],
   created: (): void => {
-    //Applies cell and number formatting to specified range of the active sheet
+    //Applies cell and number formatting to specified range of the active sheet.
     spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' },
       'A1:K1');
   }
 });
 
-//Render the initialized Spreadsheet control
 spreadsheet.appendTo('#spreadsheet');
-
-

@@ -1,16 +1,13 @@
-
-
-
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 
-//Initialize DataManager
+//Initialize DataManager.
 let data: DataManager = new DataManager({
-    url:  'https://services.syncfusion.com/js/production/api/Orders',
-    crossDomain: true,
-    adaptor: new WebApiAdaptor()
+  url: 'https://services.syncfusion.com/js/production/api/Orders',
+  crossDomain: true,
+  adaptor: new WebApiAdaptor()
 });
-//Initialize Spreadsheet control
+
 let spreadsheet: Spreadsheet = new Spreadsheet({
   sheets: [
     {
@@ -38,7 +35,4 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
   }
 });
 
-//Render the initialized Spreadsheet control
 spreadsheet.appendTo('#spreadsheet');
-
-

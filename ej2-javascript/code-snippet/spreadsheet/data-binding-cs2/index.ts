@@ -1,6 +1,3 @@
-
-
-
 import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 
@@ -19,31 +16,27 @@ class CustomAdaptor extends ODataAdaptor {
         return { result: result, count: original.count };
     }
 }
-    //Initialize DataManager
-    let data: DataManager = new DataManager({
-        //Remote service url
-        url:  'https://services.syncfusion.com/js/production/api/Orders',
-        adaptor: new CustomAdaptor,
-        crossDomain: true
-    });
+//Initialize DataManager.
+let data: DataManager = new DataManager({
+    //Remote service url.
+    url: 'https://services.syncfusion.com/js/production/api/Orders',
+    adaptor: new CustomAdaptor,
+    crossDomain: true
+});
 
-    //Initialize Spreadsheet control
-    let spreadsheet: Spreadsheet = new Spreadsheet({
-        sheets: [
-            {
-                rows: [{
-                     cells: [{ value: 'Order ID' }, { value: 'Customer Name' }, { value: 'Ship Name' },
-                    { value: 'Ship City' }, { value: 'Ship Country' }]
-                }],
-                ranges: [{ dataSource: data, showFieldAsHeader: false, startCell: 'A2' }],
-                columns: [
-                    { width: 80 }, { width: 100 }, { width: 82 },
-                    { width: 160 }, { width: 110 }, { width: 130 }
-                ]
-            }]
-    });
+let spreadsheet: Spreadsheet = new Spreadsheet({
+    sheets: [
+        {
+            rows: [{
+                cells: [{ value: 'Order ID' }, { value: 'Customer Name' }, { value: 'Ship Name' },
+                { value: 'Ship City' }, { value: 'Ship Country' }]
+            }],
+            ranges: [{ dataSource: data, showFieldAsHeader: false, startCell: 'A2' }],
+            columns: [
+                { width: 80 }, { width: 100 }, { width: 82 },
+                { width: 160 }, { width: 110 }, { width: 130 }
+            ]
+        }]
+});
 
-    //Render the initialized Spreadsheet control
-    spreadsheet.appendTo('#spreadsheet');
-
-
+spreadsheet.appendTo('#spreadsheet');

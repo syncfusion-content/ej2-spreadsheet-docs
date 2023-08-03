@@ -176,13 +176,12 @@ The following code example shows how to perform the import functionality for col
 
 import * as signalR from '@microsoft/signalr';
 
-// For signalR Hub connection
-var connection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', { // localhost from AspNetCore service
+// For signalR Hub connection.
+var connection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', {
     skipNegotiation: true,
     transport: signalR.HttpTransportType.WebSockets
 }).build();
 
-//Initialize the SpreadSheet control
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
     openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
     actionComplete: (args) => {
@@ -197,7 +196,6 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
     },
 });
 
-// Render initialized Spreadsheet.
 spreadsheet.appendTo('#spreadsheet');
 
 connection.on('dataReceived', (data) => {
@@ -215,7 +213,7 @@ connection.on('dataReceived', (data) => {
 });
 connection
     .start()
-    .then(() => { // to start the server.
+    .then(() => {
         console.log('server connected!!!');
     })
     .catch(err => console.log(err));

@@ -185,13 +185,12 @@ import { Spreadsheet, CollaborativeEditArgs } from '@syncfusion/ej2-spreadsheet'
 import * as signalR from '@microsoft/signalr';
 import { isNullOrUndefined } from "@syncfusion/ej2-base";
 
-// For signalR Hub connection
-const connection: signalR.HubConnection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', { // localhost from AspNetCore service
+// For signalR Hub connection.
+const connection: signalR.HubConnection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', {
     skipNegotiation: true,
     transport: signalR.HttpTransportType.WebSockets
 }).build();
 
-//Initialize the SpreadSheet control
 let spreadsheet: Spreadsheet = new Spreadsheet({
     openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
     actionComplete: (args: {action: string, response: any}) => {
@@ -226,7 +225,7 @@ connection.on('dataReceived', (data: string) => {
 });
 connection
     .start()
-    .then(() => { // to start the server.
+    .then(() => {
         console.log('server connected!!!');
     })
     .catch(err => console.log(err));
