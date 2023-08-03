@@ -164,6 +164,15 @@ The following list of Excel file formats are supported in Spreadsheet:
 * Excel Macro-Enabled Workbook (.xlsm)
 * Excel Binary Workbook(.xlsb)
 
+## Limitations on importing files.
+
+Spreadsheet have limitations over importing the excel file. Below are the benchmark of our Spreadsheet with importing the excel file.
+
+| Scenario | Rows * Columns |
+|-----|-----|
+| Import with normal data (without any formatting) | 50,000 * 20 (1 million cells) | 
+| Import data with format (Row height/ cell formats & Merging Wrap text randomly) | 30,000 * 10 |
+
 ## Save
 
 The Spreadsheet control saves its data, style, format, and more as Excel file document. To enable this feature, set [`allowSave`](../api/spreadsheet/#allowsave) as `true` and assign service url to the [`saveUrl`](../api/spreadsheet/#saveurl) property.
