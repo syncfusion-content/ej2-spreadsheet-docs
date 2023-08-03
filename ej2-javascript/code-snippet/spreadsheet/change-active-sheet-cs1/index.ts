@@ -1,4 +1,3 @@
-
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
