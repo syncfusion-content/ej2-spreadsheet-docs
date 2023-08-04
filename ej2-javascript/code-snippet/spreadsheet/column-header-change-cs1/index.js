@@ -1,6 +1,6 @@
 ej.base.enableRipple(true);
 
-var spreadsheet = new ej.spreadsheet.Spreadsheet({
+let spreadsheet = new ej.spreadsheet.Spreadsheet({
   beforeCellRender: function (args) {
     if (
       args.colIndex >= 0 &&
