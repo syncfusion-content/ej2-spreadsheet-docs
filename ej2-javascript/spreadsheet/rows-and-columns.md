@@ -273,6 +273,39 @@ The following code example shows how to change the width for single/multiple col
 {% previewsample "page.domainurl/code-snippet/spreadsheet/column-width-cs1" %}
 {% endif %}
 
+## Changing text in column headers
+
+Using the `beforeCellRender` event, you can change the text in the column headers. In that event, you can use the `e-header-cell` class to identify the header cell element and update its text value.
+
+The following code example shows how to change the text in the column headers.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/column-header-change-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/column-header-change-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/column-header-change-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/column-header-change-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/column-header-change-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/spreadsheet/column-header-change-cs1" %}
+{% endif %}
+
 ## See Also
 
 * [Hyperlink](./link)
