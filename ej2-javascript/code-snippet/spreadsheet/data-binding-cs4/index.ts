@@ -29,7 +29,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
     }
   ],
   created: (): void => {
-    //Applies cell and number formatting to specified range of the active sheet
+    //Applies cell and number formatting to specified range of the active sheet.
     spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' },
       'A1:K1');
   }
