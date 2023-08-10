@@ -38,4 +38,3 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
   }
 });
 spreadsheet.appendTo('#spreadsheet');
-
