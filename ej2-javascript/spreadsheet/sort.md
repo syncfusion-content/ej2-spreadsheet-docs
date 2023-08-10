@@ -186,7 +186,7 @@ The following errors have been handled for sorting,
 
 ## See Also
 
-* [Sort a range by custom list](./how-to/sort-a-range-by-custom-list.md)
+* [Sort a range by custom list](./how-to/sort-a-range-by-custom-list)
 * [Hyperlink](./link)
 * [Filtering](./filter)
 * [Undo Redo](./undo-redo)

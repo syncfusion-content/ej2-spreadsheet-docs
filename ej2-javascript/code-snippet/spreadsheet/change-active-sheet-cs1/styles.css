@@ -2,6 +2,10 @@
   visibility: hidden;
 }
 
+#spreadsheet_sheet_panel {
+  height: 380px;
+}
+
 #loader {
   color: #008cff;
   height: 40px;
@@ -12,5 +16,5 @@
 }
 
 body {
-  height: 425px;
+  height: 475px;
 }

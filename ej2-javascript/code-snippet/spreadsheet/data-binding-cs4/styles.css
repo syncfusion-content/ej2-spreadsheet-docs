@@ -1,5 +1,5 @@
 #container {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 #loader {
@@ -10,6 +10,7 @@
   top: 45%;
   width: 30%;
 }
+
 body {
   height: 425px;
 }
