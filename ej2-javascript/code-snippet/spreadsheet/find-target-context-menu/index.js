@@ -1,8 +1,6 @@
 ej.base.enableRipple(true);
 
 let spreadsheet = new ej.spreadsheet.Spreadsheet({
-    openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
-    saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
     contextMenuBeforeOpen: function (args) {
         if (closest(args.event.target, '.e-sheet-content')) {
             console.log('Cell contextMenu');

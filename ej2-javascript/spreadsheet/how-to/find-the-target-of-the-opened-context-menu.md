@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 ## Find the target of the opened context menu in ##Platform_Name## Spreadsheet control
 
-You can use the closest method to check whether the args.event.target from the [`contextMenuBeforeOpen`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#contextmenubeforeopen) event, is closer to the particular parent element using the classname.
+In the [`contextMenuBeforeOpen`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#contextmenubeforeopen) event, you can check whether the args.event.target element is closer to the particular parent element using its class name.
 
 | Context menu name | Class name |
 |-------|---------|

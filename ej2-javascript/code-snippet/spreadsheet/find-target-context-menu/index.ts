@@ -1,9 +1,11 @@
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 import { enableRipple, closest } from '@syncfusion/ej2-base';
+import { BeforeOpenCloseMenuEventArgs } from '@syncfusion/ej2-navigations';
+
 enableRipple(true);
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
-    contextMenuBeforeOpen: (args): void => {
+    contextMenuBeforeOpen: (args: BeforeOpenCloseMenuEventArgs): void => {
         if (closest(args.event.target, '.e-sheet-content')) {
             console.log('Cell contextMenu');
         } else if (closest(args.event.target, '.e-colhdr-table')) {
@@ -15,7 +17,6 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
         }
     },
 });
-
 
 spreadsheet.appendTo('#spreadsheet');
 
