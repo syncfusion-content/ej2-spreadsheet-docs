@@ -154,6 +154,37 @@ You can open excel file into a read-only mode by using the [`openComplete`](../a
 {% previewsample "page.domainurl/code-snippet/spreadsheet/open-save-cs4" %}
 {% endif %}
 
+### Open an excel file in the uploader success event
+
+You can achieve this by using the uploader [`success`](../api/uploader#success) event. In this event, you can get the uploaded file data in the argument and import the uploaded Excel into the spreadsheet by using the [`open`](../api/spreadsheet/#open) method.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/open-save-cs9/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/open-save-cs9/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/open-save-cs9" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/open-save-cs9/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/open-save-cs9/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/spreadsheet/open-save-cs9" %}
+{% endif %}
+
 ## Supported file formats
 
 The following list of Excel file formats are supported in Spreadsheet:
