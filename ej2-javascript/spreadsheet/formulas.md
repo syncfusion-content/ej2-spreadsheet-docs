@@ -22,9 +22,13 @@ You can set formula for a cell in the following ways,
 * You can set formula for a cell by [`editing`](./editing).
 * Using the [`updateCell`](../api/spreadsheet/#updatecell) method, you can set or update the cell formula.
 
-## User Defined Functions
+## Create User Defined / Custom Functions
 
-The list of formulas supported in the spreadsheet is sufficient for most of your calculations. If not, you can add your own custom function using the [`addCustomFunction`](../api/spreadsheet/#addcustomfunction) method. Use [`computeExpression`](../api/spreadsheet/#computeexpression) method, if you want to compute any formula or expression.
+Almost all spreadsheet computations can be implemented using the available [`list of supported formulas`](https://ej2.syncfusion.com/documentation/spreadsheet/formulas#supported-formulas).
+
+If you need formulas that are not supported by spreadsheet, you can add your own custom function using the [`addCustomFunction`](../api/spreadsheet/#addcustomfunction) method. You can also use [`computeExpression`](../api/spreadsheet/#computeexpression) method, if you want to compute any formula or expression.
+
+This custom function method can be used only for formulas whose results are updated to a single cell value. The formulas that return the result as an array will be tedious to achieve in this case.
 
 The following code example shows the calculation of data using supported and custom `formulas` in the spreadsheet.
 
