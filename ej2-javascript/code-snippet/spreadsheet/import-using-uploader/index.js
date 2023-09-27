@@ -4,7 +4,6 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
   openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
 });
 
-//Render initialized Spreadsheet component
 spreadsheet.appendTo('#spreadsheet');
 var uploader = new ej.inputs.Uploader({
   asyncSettings: {

@@ -1,13 +1,12 @@
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 import { Uploader } from '@syncfusion/ej2-inputs';
-//Initialize the SpreadSheet control
+
 let spreadsheet: Spreadsheet = new Spreadsheet({
   openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
 });
 
 spreadsheet.appendTo('#spreadsheet');
 
-// Initialize the uploader component
 let uploader: Uploader = new Uploader({
   asyncSettings: {
     saveUrl:
