@@ -39,7 +39,7 @@ function calculatePercentage(firstCell, secondCell) {
 }
 
 // Custom function to calculate round down for values.
-function RoundDownFunction(value, digit ) {
+function roundDownHandler(value, digit ) {
     let formulaResult, sliceValue;
     // Split the decimal values.
     let splitValue = value.split('.');
@@ -59,7 +59,7 @@ function RoundDownFunction(value, digit ) {
     }
     // Triggers when the provided digit value is negative.
     if (valueMode === -1) {
-      //  store zero's upto provided negative digit.
+      // Store zero's upto provided negative digit.
       let addZero = '';
       // Split the value that are provided with (-) sign.
       let decimalPlotting = digit.split('-');
@@ -88,6 +88,8 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
         spreadsheet.numberFormat('0%', 'E3:E12');
         // Adding custom function for calculating the percentage between two cells.
         spreadsheet.addCustomFunction(calculatePercentage, 'PERCENTAGE');
+        // Adding custom function for calculating round down for the value.
+        spreadsheet.addCustomFunction(roundDownHandler, 'ROUNDDOWN');
         // Calculate percentage using custom added formula in E12 cell.
         spreadsheet.updateCell({ formula: '=PERCENTAGE(C12,D12)' }, 'E12');
         // Update the sum of plotting values in F12 cell.
@@ -98,7 +100,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
     showRibbon: false, showSheetTabs: false
 });
 
-(window).RoundDownFunction = (value, digit) => RoundDownFunction(value, digit);
+(window).roundDownHandler = (value, digit) => roundDownHandler(value, digit);
 
 spreadsheet.appendTo('#spreadsheet');
 
