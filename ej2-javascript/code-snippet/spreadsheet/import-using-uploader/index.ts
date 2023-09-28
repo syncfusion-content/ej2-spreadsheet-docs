@@ -4,7 +4,6 @@ import { Uploader } from '@syncfusion/ej2-inputs';
 let spreadsheet: Spreadsheet = new Spreadsheet({
   openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
 });
-
 spreadsheet.appendTo('#spreadsheet');
 
 let uploader: Uploader = new Uploader({
