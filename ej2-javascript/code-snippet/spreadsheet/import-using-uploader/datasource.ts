@@ -1,6 +1,4 @@
-/**
- * Save data
- */
+
 export let data: Object[] = [
   {
     ProductID: 1,
