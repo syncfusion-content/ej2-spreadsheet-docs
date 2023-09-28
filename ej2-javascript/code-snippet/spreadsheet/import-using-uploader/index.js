@@ -15,7 +15,7 @@ var uploader = new ej.inputs.Uploader({
   success: onSuccess,
   allowedExtensions: '.xlsx, .xls, .csv',
 });
-uploader.appendTo('#fileupload');
+uploader.appendTo('#uploader');
 
 function onSuccess(args) {
   if (args.operation == 'upload') spreadsheet.open({ file: args.file.rawFile });

@@ -17,7 +17,7 @@ let uploader: Uploader = new Uploader({
   success: onSuccess,
   allowedExtensions: '.csv, .xls, .xlsx',
 });
-uploader.appendTo('#fileupload');
+uploader.appendTo('#uploader');
 
 function onSuccess(args): void {
   if (args.operation == 'upload') spreadsheet.open({ file: args.file.rawFile });
