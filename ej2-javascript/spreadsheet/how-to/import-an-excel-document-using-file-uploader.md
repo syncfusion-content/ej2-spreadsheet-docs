@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 ## Import an excel document using file uploader in ##Platform_Name## Spreadsheet control
 
-If you explore your machine to select and upload an excel document using the file uploader, you will receive the uploaded document as a raw file in the [success](../api/uploader#success) event of the file uploader. In this `success` event, you should pass the received raw file as an argument to the Spreadsheet's [open](../api/spreadsheet/#open) method to see the appropriate output.
+If you explore your machine to select and upload an excel document using the file uploader, you will receive the uploaded document as a raw file in the [success](../api/uploader/#success) event of the file uploader. In this `success` event, you should pass the received raw file as an argument to the Spreadsheet's [open](../api/spreadsheet/#open) method to see the appropriate output.
 
 {% if page.publishingplatform == "typescript" %}
 
