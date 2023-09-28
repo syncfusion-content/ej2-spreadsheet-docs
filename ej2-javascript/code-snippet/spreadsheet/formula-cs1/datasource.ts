@@ -3,7 +3,7 @@
  */
 export let data: Object[] = [
     {
-      Category: 'Household Utilities',
+      'Category': 'Household Utilities',
       'Monthly Spend': '=C3/12', // Setting formula through data binding
       'Annual Spend': 3000,
       'Last Year Spend': 3000,
@@ -11,7 +11,7 @@ export let data: Object[] = [
       'Average Change': '=7.9/E3',
     },
     {
-      Category: 'Food',
+      'Category': 'Food',
       'Monthly Spend': '=C4/12',
       'Annual Spend': 2500,
       'Last Year Spend': 2250,
@@ -19,7 +19,7 @@ export let data: Object[] = [
       'Average Change': '=7.9/E4',
     },
     {
-      Category: 'Gasoline',
+      'Category': 'Gasoline',
       'Monthly Spend': '=C5/12',
       'Annual Spend': 1500,
       'Last Year Spend': 1200,
@@ -27,7 +27,7 @@ export let data: Object[] = [
       'Average Change': '=7.9/E5',
     },
     {
-      Category: 'Clothes',
+      'Category': 'Clothes',
       'Monthly Spend': '=C6/12',
       'Annual Spend': 1200,
       'Last Year Spend': 1000,
@@ -35,7 +35,7 @@ export let data: Object[] = [
       'Average Change': '=7.9/E6',
     },
     {
-      Category: 'Insurance',
+      'Category': 'Insurance',
       'Monthly Spend': '=C7/12',
       'Annual Spend': 1500,
       'Last Year Spend': 1500,
@@ -43,7 +43,7 @@ export let data: Object[] = [
       'Average Change': '=7.9/E7',
     },
     {
-      Category: 'Taxes',
+      'Category': 'Taxes',
       'Monthly Spend': '=C8/12',
       'Annual Spend': 3500,
       'Last Year Spend': 3500,
@@ -51,7 +51,7 @@ export let data: Object[] = [
       'Average Change': '=7.9/E8',
     },
     {
-      Category: 'Entertainment',
+      'Category': 'Entertainment',
       'Monthly Spend': '=C9/12',
       'Annual Spend': 2000,
       'Last Year Spend': 2250,
@@ -59,7 +59,7 @@ export let data: Object[] = [
       'Average Change': '=7.9/E9',
     },
     {
-      Category: 'Vacation',
+      'Category': 'Vacation',
       'Monthly Spend': '=C10/12',
       'Annual Spend': 1500,
       'Last Year Spend': 2000,
@@ -67,7 +67,7 @@ export let data: Object[] = [
       'Average Change': '=7.9/E10',
     },
     {
-      Category: 'Miscellaneous',
+      'Category': 'Miscellaneous',
       'Monthly Spend': '=C11/12',
       'Annual Spend': 1250,
       'Last Year Spend': 1558,

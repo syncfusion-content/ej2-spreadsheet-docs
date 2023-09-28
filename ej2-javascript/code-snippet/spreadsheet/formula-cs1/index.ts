@@ -105,8 +105,7 @@ function calculatePercentage(firstCell: string, secondCell: string): number {
 // Custom function to calculate round down for values.
 function roundDownHandler(value: number, digit: number): number {
   let multiplier: number = Math.pow(10, digit);
-  let roundedDown: number = Math.floor(value * multiplier) / multiplier;
-  return roundedDown;
+  return Math.floor(value * multiplier) / multiplier;
 }
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
@@ -124,14 +123,11 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
     spreadsheet.addCustomFunction(roundDownHandler, 'ROUNDDOWN');
     // Calculate percentage using custom added formula in E12 cell.
     spreadsheet.updateCell({ formula: '=PERCENTAGE(C12,D12)' }, 'E12');
-    // Calculate round down for sum of plotting using custom added formula in F13 cell.
+    // Calculate round down for average values using custom added formula in F12 cell.
     spreadsheet.updateCell({ formula: '=ROUNDDOWN(F11,1)' }, 'F12');
   },
   showRibbon: false,
   showSheetTabs: false,
 });
-
-(window as any).roundDownHandler = (value: number, digit: number) =>
-  roundDownHandler(value, digit);
 
 spreadsheet.appendTo('#spreadsheet');

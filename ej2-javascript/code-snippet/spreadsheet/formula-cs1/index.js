@@ -43,8 +43,7 @@ function calculatePercentage(firstCell, secondCell) {
 // Custom function to calculate round down for values.
 function roundDownHandler(value, digit) {
   var multiplier = Math.pow(10, digit);
-  var roundedDown = Math.floor(value * multiplier) / multiplier;
-  return roundedDown;
+  return Math.floor(value * multiplier) / multiplier;
 }
 
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
@@ -62,13 +61,11 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
     spreadsheet.addCustomFunction(roundDownHandler, 'ROUNDDOWN');
     // Calculate percentage using custom added formula in E12 cell.
     spreadsheet.updateCell({ formula: '=PERCENTAGE(C12,D12)' }, 'E12');
-    // Calculate round down for sum of plotting using custom added formula in F13 cell.
+    // Calculate round down for average values using custom added formula in F12 cell.
     spreadsheet.updateCell({ formula: '=ROUNDDOWN(F11,1)' }, 'F12');
   },
   showRibbon: false, showSheetTabs: false
 });
-
-(window).roundDownHandler = (value, digit) => roundDownHandler(value, digit);
 
 spreadsheet.appendTo('#spreadsheet');
 
