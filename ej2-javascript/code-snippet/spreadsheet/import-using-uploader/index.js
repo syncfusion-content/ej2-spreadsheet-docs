@@ -3,8 +3,8 @@ ej.base.enableRipple(true);
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
   openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
 });
-
 spreadsheet.appendTo('#spreadsheet');
+
 var uploader = new ej.inputs.Uploader({
   asyncSettings: {
     saveUrl:
