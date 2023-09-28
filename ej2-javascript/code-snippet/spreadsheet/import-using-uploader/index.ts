@@ -19,5 +19,6 @@ let uploader: Uploader = new Uploader({
 uploader.appendTo('#uploader');
 
 function onSuccess(args): void {
-  if (args.operation == 'upload') spreadsheet.open({ file: args.file.rawFile });
+  if (args.operation == 'upload')
+    spreadsheet.open({ file: args.file.rawFile });
 }

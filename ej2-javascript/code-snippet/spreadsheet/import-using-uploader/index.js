@@ -18,5 +18,6 @@ var uploader = new ej.inputs.Uploader({
 uploader.appendTo('#uploader');
 
 function onSuccess(args) {
-  if (args.operation == 'upload') spreadsheet.open({ file: args.file.rawFile });
+  if (args.operation == 'upload')
+    spreadsheet.open({ file: args.file.rawFile });
 }

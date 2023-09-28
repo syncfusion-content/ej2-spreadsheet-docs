@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Import an excel file using uploader in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about import an excel file using uploader in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Import an excel document using file uploader in ##Platform_Name## Spreadsheet control | Syncfusion
+description: Learn here all about importing an excel document using file uploader in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
 control: Spreadsheet 
 publishingplatform: ##Platform_Name##
@@ -9,13 +9,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Import an excel file using uploader in ##Platform_Name## Spreadsheet control
+## Import an excel document using file uploader in ##Platform_Name## Spreadsheet control
 
-If you select the file using file uploader then you will get the uploaded file data in the [success](../api/uploader#success) event of file uploader. In this event, you should pass the received file data as argument to the [open](../api/spreadsheet/#open) method of the spreadsheet.
+If you explore your machine to select and upload an excel document using the file uploader, you will receive the uploaded document as a raw file in the [success](../api/uploader#success) event of the file uploader. In this `success` event, you should pass the received raw file as an argument to the Spreadsheet's [open](../api/spreadsheet/#open) method to see the appropriate output.
 
 {% if page.publishingplatform == "typescript" %}
 
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/spreadsheet/import-using-uploader/index.ts %}
 {% endhighlight %}
