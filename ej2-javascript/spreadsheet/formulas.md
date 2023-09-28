@@ -22,20 +22,17 @@ You can set formula for a cell in the following ways,
 * You can set formula for a cell by [`editing`](./editing).
 * Using the [`updateCell`](../api/spreadsheet/#updatecell) method, you can set or update the cell formula.
 
-## Create User Defined / Custom Functions
+## Create User Defined Functions / Custom Functions
 
-There is a list of the built-in formulas supported by the spreadsheet. You can find the supported formulas on the below reference.
-[list of supported formulas](https://ej2.syncfusion.com/documentation/spreadsheet/formulas#supported-formulas).
+The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://ej2.syncfusion.com/documentation/spreadsheet/formulas#supported-formulas).
 
-You can use the [addCustomFunction](../api/spreadsheet/#addcustomfunction) function to declare an unsupported formula as a custom formula and used it in the spreadsheet. If you want to compute any formula or expression within a custom formula, then you can use [computeExpression](../api/spreadsheet/#computeexpression) method.
+You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the [addCustomFunction](../api/spreadsheet/#addcustomfunction) function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
 
-You should define custom formulas whose results will be updated on a single cell value. If the custom formula returns an array, it will be tedious to update adjacent cell values.
-
-The following code example shows the calculation of data using supported and custom `formulas` in the spreadsheet.
+The following code example shows an unsupported formula in the spreadsheet.
 
 {% if page.publishingplatform == "typescript" %}
 
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/spreadsheet/formula-cs1/index.ts %}
 {% endhighlight %}
@@ -59,6 +56,8 @@ The following code example shows the calculation of data using supported and cus
 
 {% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs1" %}
 {% endif %}
+
+Second, if you want to directly compute any formula or expression, you can use the [computeExpression](../api/spreadsheet/#computeexpression) method.
 
 ## Formula bar
 
