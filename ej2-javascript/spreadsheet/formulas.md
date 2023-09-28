@@ -25,9 +25,9 @@ You can set formula for a cell in the following ways,
 ## Create User Defined / Custom Functions
 
 There is a list of the built-in formulas supported by the spreadsheet. You can find the supported formulas on the below reference.
-[`list of supported formulas`](https://ej2.syncfusion.com/documentation/spreadsheet/formulas#supported-formulas).
+[list of supported formulas](https://ej2.syncfusion.com/documentation/spreadsheet/formulas#supported-formulas).
 
-You can use the [`addCustomFunction`](../api/spreadsheet/#addcustomfunction) function to declare an unsupported formula as a custom formula and used it in the spreadsheet. If you want to compute any formula or expression within a custom formula, then you can use [`computeExpression`](../api/spreadsheet/#computeexpression) method.
+You can use the [addCustomFunction](../api/spreadsheet/#addcustomfunction) function to declare an unsupported formula as a custom formula and used it in the spreadsheet. If you want to compute any formula or expression within a custom formula, then you can use [computeExpression](../api/spreadsheet/#computeexpression) method.
 
 You should define custom formulas whose results will be updated on a single cell value. If the custom formula returns an array, it will be tedious to update adjacent cell values.
 
