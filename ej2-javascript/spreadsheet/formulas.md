@@ -57,7 +57,36 @@ The following code example shows an unsupported formula in the spreadsheet.
 {% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs1" %}
 {% endif %}
 
-Second, if you want to directly compute any formula or expression, you can use the [computeExpression](../api/spreadsheet/#computeexpression) method.
+Second, if you want to directly compute any formula or expression, you can use the [computeExpression](../api/spreadsheet/#computeexpression) method. This method will work for both built-in and custom-added formulas.
+
+The following code example shows how to use computeExpression method in the spreadsheet.
+
+{% if page.publishingplatform == "typescript" %}
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/formula-cs2/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/formula-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs2" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/formula-cs2/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/formula-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs2" %}
+{% endif %}
 
 ## Formula bar
 
