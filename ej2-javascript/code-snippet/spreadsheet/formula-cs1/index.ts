@@ -125,7 +125,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
     spreadsheet.updateCell({ formula: '=PERCENTAGE(C12,D12)' }, 'E12');
     // Calculate round down for average values using custom added formula in F12 cell.
     spreadsheet.updateCell(
-      { value: spreadsheet.computeExpression('=ROUNDDOWN(F11,1)') as string },
+      { formula: '=ROUNDDOWN(F11,1)' },
       'F12'
     );
   },
