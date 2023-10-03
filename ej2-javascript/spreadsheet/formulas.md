@@ -57,9 +57,9 @@ The following code example shows an unsupported formula in the spreadsheet.
 {% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs1" %}
 {% endif %}
 
-Second, if you want to directly compute any formula or expression, you can use the [computeExpression](../api/spreadsheet/#computeexpression) method. This method will work for both built-in and custom-added formulas.
+Second, if you want to directly compute any formula or expression, you can use the [computeExpression](../api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
 
-The following code example shows how to use computeExpression method in the spreadsheet.
+The following code example shows how to use `computeExpression` method in the spreadsheet.
 
 {% if page.publishingplatform == "typescript" %}
 
