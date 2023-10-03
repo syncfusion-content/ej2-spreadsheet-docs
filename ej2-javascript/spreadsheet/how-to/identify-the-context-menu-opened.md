@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Find the target of the opened context menu in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about how to find the target of the opened context menu in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Identify the context menu opened in ##Platform_Name## Spreadsheet control | Syncfusion
+description: Learn here all about how to identify the context menu opened in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
 control: Spreadsheet 
 publishingplatform: ##Platform_Name##
@@ -9,18 +9,20 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Find the target of the opened context menu in ##Platform_Name## Spreadsheet control
+## Identify the context menu opened in ##Platform_Name## Spreadsheet control
 
-In the [`contextMenuBeforeOpen`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#contextmenubeforeopen) event, you can check whether the args.event.target element is closer to the particular parent element using its class name.
+The Spreadsheet includes several context menus that will open and display depending on the action. When you right-click on a cell, for example, a context menu with options related to the cell element appears.
 
-| Context menu name | Class name |
+The class name returned by the [contextMenuBeforeOpen](../api/spreadsheet/#contextmenubeforeopen) event can be used to identify the context menu that is opened. The context menus and their class names are tabulated below.
+
+| Class name | Context menu name |
 |-------|---------|
-| Column header context menu | .e-colhdr-table |
-| Row header context menu | .e-rowhdr-table |
-| Cell context menu | .e-sheet-content |
-| Footer context menu | .e-toolbar-item |
+| .e-sheet-content | Cell context menu |
+| .e-toolbar-item | Footer context menu |
+| .e-rowhdr-table | Row header context menu |
+| .e-colhdr-table | Column header context menu |
 
-The following code example shows how to find the target of the opened context menu.
+The following code example shows how to identify the context menu opened.
 
 {% if page.publishingplatform == "typescript" %}
 
