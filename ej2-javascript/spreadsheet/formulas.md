@@ -22,15 +22,17 @@ You can set formula for a cell in the following ways,
 * You can set formula for a cell by [`editing`](./editing).
 * Using the [`updateCell`](../api/spreadsheet/#updatecell) method, you can set or update the cell formula.
 
-## User Defined Functions
+## Create User Defined Functions / Custom Functions
 
-The list of formulas supported in the spreadsheet is sufficient for most of your calculations. If not, you can add your own custom function using the [`addCustomFunction`](../api/spreadsheet/#addcustomfunction) method. Use [`computeExpression`](../api/spreadsheet/#computeexpression) method, if you want to compute any formula or expression.
+The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://ej2.syncfusion.com/documentation/spreadsheet/formulas#supported-formulas).
 
-The following code example shows the calculation of data using supported and custom `formulas` in the spreadsheet.
+You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the [addCustomFunction](../api/spreadsheet/#addcustomfunction) function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
+
+The following code example shows an unsupported formula in the spreadsheet.
 
 {% if page.publishingplatform == "typescript" %}
 
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/spreadsheet/formula-cs1/index.ts %}
 {% endhighlight %}
@@ -53,6 +55,37 @@ The following code example shows the calculation of data using supported and cus
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs1" %}
+{% endif %}
+
+Second, if you want to directly compute any formula or expression, you can use the [computeExpression](../api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
+
+The following code example shows how to use `computeExpression` method in the spreadsheet.
+
+{% if page.publishingplatform == "typescript" %}
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/formula-cs2/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/formula-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs2" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/formula-cs2/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/formula-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/spreadsheet/formula-cs2" %}
 {% endif %}
 
 ## Formula bar
