@@ -1,15 +1,6 @@
-import {
-  Spreadsheet,
-  SheetModel,
-  ColumnModel,
-  RowModel,
-} from '@syncfusion/ej2-spreadsheet';
-import { data } from './datasource.ts';
-import { enableRipple } from '@syncfusion/ej2-base';
+ej.base.enableRipple(true);
 
-enableRipple(true);
-
-let columns: ColumnModel[] = [
+var columns = [
   { width: 150 },
   { width: 120 },
   { width: 120 },
@@ -18,7 +9,7 @@ let columns: ColumnModel[] = [
   { width: 150 },
 ];
 
-let rows: RowModel[] = [
+var rows = [
   {
     height: 40,
     customHeight: true,
@@ -93,24 +84,18 @@ let rows: RowModel[] = [
   },
 ];
 
-let sheets: SheetModel[] = [
+var sheets = [
   { ranges: [{ dataSource: data, startCell: 'A2' }], columns: columns, rows },
 ];
 
 // Custom function to calculate percentage between two cell values.
-function calculatePercentage(firstCell: string, secondCell: string): number {
+function calculatePercentage(firstCell, secondCell) {
   return Number(firstCell) / Number(secondCell);
 }
 
-// Custom function to calculate round down for values.
-function roundDownHandler(value: number, digit: number): number {
-  let multiplier: number = Math.pow(10, digit);
-  return Math.floor(value * multiplier) / multiplier;
-}
-
-let spreadsheet: Spreadsheet = new Spreadsheet({
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
   sheets: sheets,
-  created: (): void => {
+  created: function () {
     spreadsheet.cellFormat(
       { fontWeight: 'bold', textAlign: 'center' },
       'A2:F2'
@@ -119,14 +104,25 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
     spreadsheet.numberFormat('0%', 'E3:E12');
     // Adding custom function for calculating the percentage between two cells.
     spreadsheet.addCustomFunction(calculatePercentage, 'PERCENTAGE');
-    // Adding custom function for calculating round down for the value.
-    spreadsheet.addCustomFunction(roundDownHandler, 'ROUNDDOWN');
-    // Calculate percentage using custom added formula in E12 cell.
-    spreadsheet.updateCell({ formula: '=PERCENTAGE(C12,D12)' }, 'E12');
-    // Calculate round down for average values using custom added formula in F12 cell.
+
+    // Calculate percentage using custom added formula in E11 cell.
+    spreadsheet.updateCell({ formula: '=PERCENTAGE(C11,D11)' }, 'E11');
+    // Calculate expressions using computeExpression in E10 cell.
     spreadsheet.updateCell(
-      { formula: '=ROUNDDOWN(F11,1)' },
-      'F12'
+      { value: spreadsheet.computeExpression('C10/D10') },
+      'E10'
+    );
+    // Calculate custom formula values using computeExpression in E12 cell.
+    spreadsheet.updateCell(
+      {
+        value: spreadsheet.computeExpression('=PERCENTAGE(C12,D12)'),
+      },
+      'E12'
+    );
+    // Calculate SUM (built-in) formula values using computeExpression in D12 cell.
+    spreadsheet.updateCell(
+      { value: spreadsheet.computeExpression('=SUM(D3:D11)') },
+      'D12'
     );
   },
   showRibbon: false,
