@@ -101,8 +101,8 @@ Add the HTML `div` element with ID attribute as `element` in your `index.html` f
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-        <!--Element which will render as Spreadsheet-->
-        <div id="element"></div>
+    <!--Element which will render as Spreadsheet-->
+    <div id="element"></div>
 </body>
 </html>
 
