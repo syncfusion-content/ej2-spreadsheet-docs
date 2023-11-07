@@ -47,21 +47,21 @@ The Essential JS 2 Spreadsheet control can be initialized by using any of the fo
 
 You can get the global scripts and styles from the [Essential Studio JavaScript (Essential JS 2)](https://www.syncfusion.com/downloads/essential-js2) build installed location.
 
-After installing the Essential JS 2 product build, you can copy the Spreadsheet and its dependencies scripts and style file into the resources/scripts and resources/styles folder.
+After installing the Essential JS 2 product build, you can copy the Spreadsheet and its dependencies scripts and style file into the resources folder.
 
 Refer to the following code to find Spreadsheet's script and style file location.
 
 **Syntax:**
 
-> Script: `**(installed location)**/Syncfusion/Essential Studio/{RELEASE_VERSION}/Essential JS 2/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js`
+> Script: `**(installed location)**/Syncfusion/Essential Studio/JavaScript-EJ2/{RELEASE_VERSION}/Web(Essential JS 2)/JavaScript/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js`
 >
-> Styles: `**(installed location)**/Syncfusion/Essential Studio/{RELEASE_VERSION}/Essential JS 2/{PACKAGE_NAME}/styles/material.css`
+> Styles: `**(installed location)**/Syncfusion/Essential Studio/JavaScript-EJ2/{RELEASE_VERSION}/Web(Essential JS 2)/JavaScript/{PACKAGE_NAME}/styles/material.css`
 
 **Example:**
 
-> Script: `C:/Program Files (x86)/Syncfusion/Essential Studio/17.2.0.34/Essential JS 2/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js`
+> Script: `C:/Program Files (x86)/Syncfusion/Essential Studio/JavaScript-EJ2/23.1.36/Web(Essential JS 2)/JavaScript/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js`
 >
-> Styles: `C:/Program Files (x86)/Syncfusion/Essential Studio/17.2.0.34/Essential JS 2/ej2-spreadsheet/styles/material.css`
+> Styles: `C:/Program Files (x86)/Syncfusion/Essential Studio/JavaScript-EJ2/23.1.36/Web(Essential JS 2)/JavaScript/ej2-spreadsheet/styles/material.css`
 
 After copying the files, then you can refer the Spreadsheet's scripts and styles into the `index.html` file. The following html code example shows the minimal dependency of Spreadsheet.
 
