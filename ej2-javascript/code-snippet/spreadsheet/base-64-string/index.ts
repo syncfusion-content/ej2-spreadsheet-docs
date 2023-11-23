@@ -6,7 +6,7 @@ let blob: Blob; let base64String: any;
 
 //Initialize the SpreadSheet control
 let spreadsheet: Spreadsheet = new Spreadsheet({
-
+  openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
   sheets: [{
     name: 'Car Sales Report',
     ranges: [{ dataSource: data }],
