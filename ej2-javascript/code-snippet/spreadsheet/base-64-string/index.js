@@ -238,6 +238,7 @@ var data = [
 let blob; let base64String;
 
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
+  openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
   sheets: [{
     name: 'Car Sales Report',
     ranges: [{ dataSource: data }],
