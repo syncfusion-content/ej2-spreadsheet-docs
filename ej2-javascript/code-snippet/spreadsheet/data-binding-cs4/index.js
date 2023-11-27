@@ -1,7 +1,7 @@
 //Initialize DataManager.
 var data = new ej.data.DataManager({
   url: 'https://services.syncfusion.com/js/production/api/Orders',
-  adaptor: new WebApiAdaptor(),
+  adaptor: new ej.data.WebApiAdaptor(),
   crossDomain: true
 });
 
