@@ -2,7 +2,7 @@
 import { Spreadsheet, BeforeSaveEventArgs, SaveCompleteEventArgs } from '@syncfusion/ej2-spreadsheet';
 import { data } from './datasource.ts';
 
-let blob: Blob; let base64String: any;
+let base64String: any;
 
 //Initialize the SpreadSheet control
 let spreadsheet: Spreadsheet = new Spreadsheet({
@@ -22,16 +22,14 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
   },
 
   beforeSave: (args: BeforeSaveEventArgs): void => {
-    args.needBlobData = true; //To trigger saveComplete event
-    args.isFullPost = false; // To get blob data of Spreadsheet
+    args.needBlobData = true; //To trigger the saveComplete event.
+    args.isFullPost = false; // Get the spreadsheet data as blob data in the saveComplete event.
   },
 
   saveComplete: (args: SaveCompleteEventArgs): void => {
-    // Assign blobdata to a variable.
-    blob = args.blobData;
     // Convert blob data to base64 string.
     let reader: FileReader = new FileReader();
-    reader.readAsDataURL(blob);
+    reader.readAsDataURL(args.blobData);
     reader.onloadend = function () {
       base64String = reader.result;
     };
@@ -41,7 +39,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
 
 spreadsheet.appendTo('#spreadsheet');
 
-document.getElementById("import").onclick = () => {
+document.getElementById("import")!.onclick = () => {
   // Open the file based on saved base64 string.
   fetch(base64String)
     .then((response) => response.blob())
@@ -51,7 +49,7 @@ document.getElementById("import").onclick = () => {
     });
 }
 
-document.getElementById("export").onclick = () => {
+document.getElementById("export")!.onclick = () => {
   spreadsheet.save({
     url: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
     fileName: 'Worksheet',

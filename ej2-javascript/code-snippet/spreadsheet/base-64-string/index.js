@@ -235,7 +235,7 @@ var data = [
   }
 ];
 
-let blob; let base64String;
+let base64String;
 
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
   openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
@@ -254,16 +254,14 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
   },
 
   beforeSave: (args) => {
-    args.needBlobData = true; //To trigger saveComplete event
-    args.isFullPost = false; // To get blob data of Spreadsheet
+    args.needBlobData = true; //To trigger the saveComplete event.
+    args.isFullPost = false; // Get the spreadsheet data as blob data in the saveComplete event.
   },
 
   saveComplete: (args) => {
-    // Assign blobdata to a variable.
-    blob = args.blobData;
     // Convert blob data to base64 string.
     let reader = new FileReader();
-    reader.readAsDataURL(blob);
+    reader.readAsDataURL(args.blobData);
     reader.onloadend = function () {
       base64String = reader.result;
     };
