@@ -234,7 +234,7 @@ export let data: Object[] = [
     }
 ];
 
-export let newData: Object[] = [
+export let employeeData: Object[] = [
     {
         "Employee ID": "5389863",
         "Employee Name": "Liuka Tewkesberry",

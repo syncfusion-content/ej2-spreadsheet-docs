@@ -235,7 +235,7 @@ var data = [
     }
 ];
 
-var newData = [
+var employeeData = [
     {
         "Employee ID": "5389863",
         "Employee Name": "Liuka Tewkesberry",
@@ -714,7 +714,7 @@ document.getElementById("insertSheet").onclick = () => {
                 name: 'new_sheet',
                 ranges: [
                     {
-                        dataSource: newData,
+                        dataSource: employeeData,
                         startCell: 'A1'
                     },
                 ],
@@ -722,9 +722,9 @@ document.getElementById("insertSheet").onclick = () => {
             },
         ]
     );
-    // Timeout function to wait until the sheet is inserted.
+    // Use the timeout function to wait until the sheet is inserted.
     setTimeout(() => {
-        // Method to switch to the new sheet.
+        // Method for switching to a new sheet.
         spreadsheet.goTo('new_sheet!A1');
     })
 };
