@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Insert a sheet programmatically and make the inserted sheet as the active sheet in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about insert a sheet programmatically and make the inserted sheet as active sheet in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+description: Learn here all about insert a sheet programmatically and make the inserted sheet as the active sheet in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
 control: Spreadsheet 
 publishingplatform: ##Platform_Name##
