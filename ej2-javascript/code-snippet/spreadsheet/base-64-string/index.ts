@@ -22,7 +22,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
   },
 
   beforeSave: (args: BeforeSaveEventArgs): void => {
-    args.needBlobData = true; //To trigger the saveComplete event.
+    args.needBlobData = true; // To trigger the saveComplete event.
     args.isFullPost = false; // Get the spreadsheet data as blob data in the saveComplete event.
   },
 
@@ -44,7 +44,7 @@ document.getElementById("import")!.onclick = (): void => {
   fetch(base64String)
     .then((response) => response.blob())
     .then((fileBlob) => {
-      var file = new File([fileBlob], 'Sample.xlsx'); // to open the blob file
+      var file = new File([fileBlob], 'Sample.xlsx');
       spreadsheet.open({ file: file });
     });
 }
