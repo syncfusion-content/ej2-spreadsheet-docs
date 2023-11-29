@@ -39,7 +39,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
 
 spreadsheet.appendTo('#spreadsheet');
 
-document.getElementById("import")!.onclick = () => {
+document.getElementById("import")!.onclick = (): void => {
   // Open the file based on saved base64 string.
   fetch(base64String)
     .then((response) => response.blob())
@@ -49,12 +49,12 @@ document.getElementById("import")!.onclick = () => {
     });
 }
 
-document.getElementById("export")!.onclick = () => {
+document.getElementById("export")!.onclick = (): void => {
   spreadsheet.save({
     url: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
     fileName: 'Worksheet',
     saveType: 'Xlsx',
-  }); // Specifies the save URL, filename, file type need to be saved.
+  }); // Specifies the save URL, file name, file type need to be saved.
   // Logs base64 string into the console.
   console.log('Base64 String - ', base64String);
 }

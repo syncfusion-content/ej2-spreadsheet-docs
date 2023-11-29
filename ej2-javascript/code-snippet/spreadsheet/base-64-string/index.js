@@ -287,7 +287,7 @@ document.getElementById("export").onclick = () => {
     url: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
     fileName: 'Worksheet',
     saveType: 'Xlsx',
-  }); // Specifies the save URL, filename, file type need to be saved.
+  }); // Specifies the save URL, file name, file type need to be saved.
   // Logs base64 string into the console.
   console.log('Base64 String - ', base64String);
 }
