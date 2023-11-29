@@ -4,7 +4,6 @@ import { data } from './datasource.ts';
 
 let base64String: any;
 
-//Initialize the SpreadSheet control
 let spreadsheet: Spreadsheet = new Spreadsheet({
   openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
   sheets: [{
@@ -44,7 +43,7 @@ document.getElementById("import")!.onclick = (): void => {
   fetch(base64String)
     .then((response) => response.blob())
     .then((fileBlob) => {
-      var file = new File([fileBlob], 'Sample.xlsx');
+      let file = new File([fileBlob], 'Sample.xlsx');
       spreadsheet.open({ file: file });
     });
 }
