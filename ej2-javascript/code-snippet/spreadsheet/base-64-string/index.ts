@@ -2,7 +2,7 @@
 import { Spreadsheet, BeforeSaveEventArgs, SaveCompleteEventArgs } from '@syncfusion/ej2-spreadsheet';
 import { data } from './datasource.ts';
 
-let base64String: any;
+let base64String: string | ArrayBuffer;
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
   openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
@@ -30,7 +30,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
     let reader: FileReader = new FileReader();
     reader.readAsDataURL(args.blobData);
     reader.onloadend = function () {
-      base64String = reader.result;
+      base64String = reader.result ? reader.result : '';
     };
   }
 
@@ -40,7 +40,7 @@ spreadsheet.appendTo('#spreadsheet');
 
 document.getElementById("import")!.onclick = (): void => {
   // Open the file based on saved base64 string.
-  fetch(base64String)
+  fetch(base64String.toString())
     .then((response) => response.blob())
     .then((fileBlob) => {
       let file = new File([fileBlob], 'Sample.xlsx');
