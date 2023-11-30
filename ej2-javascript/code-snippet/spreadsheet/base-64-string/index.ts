@@ -40,7 +40,7 @@ spreadsheet.appendTo('#spreadsheet');
 
 document.getElementById("import")!.onclick = (): void => {
   // Open the file based on saved base64 string.
-  fetch(base64String.toString())
+  fetch(base64String as string)
     .then((response) => response.blob())
     .then((fileBlob) => {
       let file = new File([fileBlob], 'Sample.xlsx');
