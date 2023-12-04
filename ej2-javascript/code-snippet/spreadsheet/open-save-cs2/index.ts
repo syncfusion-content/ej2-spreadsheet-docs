@@ -8,7 +8,7 @@ import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
         openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
         saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
         created: (): void => {
-            fetch("https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx") // fetch the remote url
+            fetch("https://cdn.syncfusion.com/scripts/spreadsheet/Sample.xlsx") // fetch the remote url
                 .then((response) => {
                     response.blob().then((fileBlob) => { // convert the excel file to blob
                     let file = new File([fileBlob], "Sample.xlsx"); //convert the blob into file
