@@ -31,17 +31,13 @@ spreadsheet.appendTo('#spreadsheet');
 
 document.getElementById("getFilterData").onclick = () => {
     let activeSheet: SheetModel = spreadsheet.getActiveSheet();
-    if (activeSheet) {
-        let usedRange: UsedRangeModel = activeSheet.usedRange;
-        if (usedRange) {
-            for (let i: number = 0; i <= usedRange.rowIndex; i++) {
-                // Get the filtered row using isFiltered property.
-                let filteredRow: Object = (activeSheet.rows[i] as ExtendedRowModel).isFiltered;
-                if (!filteredRow) {
-                    let rowData: Object = spreadsheet.getRowData(i);
-                    console.log("Row:", i + 1, "Cells", rowData);
-                }
-            }
+    let usedRange: UsedRangeModel = activeSheet.usedRange;
+    for (let i: number = 0; i <= usedRange.rowIndex; i++) {
+        // Get the filtered row using isFiltered property.
+        let filteredRow: Object = (activeSheet.rows[i] as ExtendedRowModel).isFiltered;
+        if (!filteredRow) {
+            let rowData: Object = spreadsheet.getRowData(i);
+            console.log("Row:", i + 1, "Cells", rowData);
         }
     }
 };
