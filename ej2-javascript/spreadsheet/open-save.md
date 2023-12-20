@@ -191,7 +191,7 @@ Spreadsheet have limitations over importing the excel file. Below are the benchm
 | Import with normal data (without any formatting) | 50,000 * 20 (1 million cells) | 
 | Import data with format (Row height/ cell formats & Merging Wrap text randomly) | 30,000 * 10 |
 
-Based on the limitations, if the formats and formulas are applied in the imported Excel, the threshold limit may vary. So, loading such a large file into the spreadsheet is not possible because the construction of JSON and the loading of such a large JSON into the spreadsheet are tedious processes.
+Based on the limitations, if the formats and formulas are applied in the imported Excel, the threshold limit may vary. So, loading such a large file (contains data beyond the limitations allowed) into the spreadsheet is not possible because the construction of JSON and the loading of such a large JSON into the spreadsheet are tedious processes.
 
 If needed to skip the loading of a larger file, you have two options to restrict the file by importing into the spreadsheet and causing the server goes unresponsive. Those properties are.
 
@@ -215,6 +215,10 @@ Enable this in the Open action on the server side, as shown below.
 ```
 
 The above set of logic will throw the alert dialog to skip the opening of larger size in spreadsheet. By clicking the Cancel button, it will skip the importing progress. And on clicking OK button, spreadsheet tries to load the file.
+
+> This feature is only applicable when importing an Excel file that contains data beyond the limitations allowed.
+
+![Import Alert Dialog](./images/import_alert_dialog%20.png)
 
 ## Save
 
