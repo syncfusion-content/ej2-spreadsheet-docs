@@ -18,7 +18,7 @@ The [`Localization`](../common/localization) library allows you to localize the 
 
 ### Loading translations
 
-Other than English culture, ensure that locale text for the concerned culture is loaded through [`load`](../common/internationalization/#load) method of [`L10n`](../common/internationalization) class and set the culture by using the [`locale`](../api/spreadsheet/#locale) property.
+Other than English culture, ensure that locale text for the concerned culture is loaded through [`load`](../common/internationalization/#load) method of [`L10n`](../common/internationalization) class and set the culture by using the [`locale`](../api/spreadsheet/#locale) property
 
 The following example demonstrates the Spreadsheet in `French` culture. In the below sample we have translated the ribbon tab names and Home tab content (clipboard, cell style).
 
