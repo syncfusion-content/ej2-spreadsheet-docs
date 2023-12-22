@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 Filtering allows you to view specific rows in a spreadsheet while hiding the others. The [allowFiltering](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property allows you to enable or disable filtering functionality through the UI. You can also use the [allowFiltering](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property and [applyFilter](https://ej2.syncfusion.com/documentation/api/spreadsheet/#applyfilter) method combination to filter data via code behind. The filtered rows can be identified by iterating through the row collection on the sheet and using the `isFiltered` property available in each row object.
 
-The following code example shows how to get the filtered row details.
+The following code example shows how to get the filtered rows.
 
 {% if page.publishingplatform == "typescript" %}
 
