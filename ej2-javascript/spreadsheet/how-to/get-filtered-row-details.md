@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Get the filtered row details in ##Platform_Name## Spreadsheet component
+## Get the filtered row details in ##Platform_Name## Spreadsheet control
 
 Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [allowFiltering](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property to enable or disable filtering functionality. Using the [applyFilter](https://ej2.syncfusion.com/documentation/api/spreadsheet/#applyfilter) method you can be able to filter the data present. With the help of isFiltered property you can be able to identify the filtered row.
 
