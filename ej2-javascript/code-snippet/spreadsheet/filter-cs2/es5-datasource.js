@@ -1,5 +1,5 @@
 
-var defaultData = [
+let defaultData = [
   {
       "Customer Name": "Romona Heaslip",
       "Model": "Taurus",
