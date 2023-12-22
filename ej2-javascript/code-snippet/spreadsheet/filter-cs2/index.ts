@@ -10,7 +10,6 @@ let columns: ColumnModel[] = [
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
     sheets: [{ ranges: [{ dataSource: defaultData }], columns: columns }],
-    allowFiltering: true,
     created: function () {
         // Applies cell formatting to specified range of the active sheet
         spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
@@ -26,7 +25,6 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
     }
 });
 
-//Render the initialized Spreadsheet
 spreadsheet.appendTo('#spreadsheet');
 
 document.getElementById("getFilterData").onclick = () => {

@@ -9,7 +9,6 @@ let sheet = [{
 
 let spreadsheet = new ej.spreadsheet.Spreadsheet({
     sheets: sheet,
-    allowFiltering: true,
     created: function () {
         // Applies cell formatting to specified range of the active sheet
         spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
@@ -25,7 +24,6 @@ let spreadsheet = new ej.spreadsheet.Spreadsheet({
     }
 });
 
-// Render initialized Spreadsheet.
 spreadsheet.appendTo('#spreadsheet');
 
 document.getElementById("getFilterData").onclick = () => {
