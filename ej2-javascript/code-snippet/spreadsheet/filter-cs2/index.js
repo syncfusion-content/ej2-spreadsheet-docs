@@ -1,6 +1,5 @@
-// Initialize the Spreadsheet component.
 
-var sheet = [{
+let sheet = [{
     ranges: [{ dataSource: defaultData }],
     columns: [
         { width: 180 }, { width: 130 }, { width: 130 }, { width: 180 },
@@ -8,7 +7,7 @@ var sheet = [{
     ]
 }];
 
-var spreadsheet = new ej.spreadsheet.Spreadsheet({
+let spreadsheet = new ej.spreadsheet.Spreadsheet({
     sheets: sheet,
     allowFiltering: true,
     created: function () {

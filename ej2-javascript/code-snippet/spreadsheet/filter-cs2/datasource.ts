@@ -1,6 +1,4 @@
-/**
- * Default data source
- */
+
 export let defaultData: Object[] = [
   {
       "Customer Name": "Romona Heaslip",

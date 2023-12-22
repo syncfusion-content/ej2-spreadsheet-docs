@@ -1,6 +1,4 @@
-/**
- * Default data source
- */
+
 var defaultData = [
   {
       "Customer Name": "Romona Heaslip",
