@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get the filtered row details in the ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about how to get the filtered row details in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Get the filtered rows in ##Platform_Name## Spreadsheet control | Syncfusion
+description: Learn here all about how to get the filtered rows in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
 control: Spreadsheet
 publishingplatform: ##Platform_Name##
@@ -9,9 +9,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Get the filtered row details in ##Platform_Name## Spreadsheet control
+## Get the filtered rows in ##Platform_Name## Spreadsheet control
 
-Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [allowFiltering](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property to enable or disable filtering functionality. Using the [applyFilter](https://ej2.syncfusion.com/documentation/api/spreadsheet/#applyfilter) method you can be able to filter the data present. With the help of isFiltered property you can be able to identify the filtered row.
+Filtering allows you to view specific rows in a spreadsheet by hiding the other rows. You can enable or disable filtering functionality using the [allowFiltering](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property. You can also use the [applyFilter](https://ej2.syncfusion.com/documentation/api/spreadsheet/#applyfilter) method to filter the data. The filtered rows can be obtained by using the isFiltered property on each row.
 
 The following code example shows how to get the filtered row details.
 
