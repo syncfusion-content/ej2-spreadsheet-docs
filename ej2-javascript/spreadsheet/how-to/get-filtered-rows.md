@@ -11,9 +11,9 @@ domainurl: ##DomainURL##
 
 ## Get the filtered rows in ##Platform_Name## Spreadsheet control
 
-Filtering allows you to view specific rows in a spreadsheet by hiding the other rows. You can enable or disable filtering functionality using the [allowFiltering](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property. You can also use the [applyFilter](https://ej2.syncfusion.com/documentation/api/spreadsheet/#applyfilter) method to filter the data. The filtered rows can be obtained by using the isFiltered property on each row.
+Filtering allows you to view specific rows in a spreadsheet by hiding the other rows. You can enable or disable filtering functionality using the [allowFiltering](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property. You can also use the [applyFilter](https://ej2.syncfusion.com/documentation/api/spreadsheet/#applyfilter) method to filter the data. The filtered rows can be obtained by using the `isFiltered` property on each row.
 
-The following code example shows how to get the filtered row details.
+The following code example shows how to get the filtered rows.
 
 {% if page.publishingplatform == "typescript" %}
 
