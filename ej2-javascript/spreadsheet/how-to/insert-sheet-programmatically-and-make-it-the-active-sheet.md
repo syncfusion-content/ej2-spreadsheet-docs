@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 ## Insert a sheet programmatically and make it the active sheet in ##Platform_Name## Spreadsheet control
 
-A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#goto) method.
+A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/documentation/api/spreadsheet/#goto) method.
 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
