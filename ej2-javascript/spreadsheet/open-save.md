@@ -182,6 +182,44 @@ The following list of Excel file formats are supported in Spreadsheet:
 * Excel Macro-Enabled Workbook (.xlsm)
 * Excel Binary Workbook(.xlsb)
 
+## Limitations on importing files.
+
+Spreadsheet have limitations over importing the excel file. Below are the benchmark of our Spreadsheet with importing the excel file.
+
+| Scenario | Rows * Columns |
+|-----|-----|
+| Import with normal data (without any formatting) | 50,000 * 20 (1 million cells) | 
+| Import data with format (Row height/ cell formats & Merging Wrap text randomly) | 30,000 * 10 |
+
+Based on the limitations, if the formats and formulas are applied in the imported Excel, the threshold limit may vary. So, loading such a large file (contains data beyond the limitations allowed) into the spreadsheet is not possible because the construction of JSON and the loading of such a large JSON into the spreadsheet are tedious processes.
+
+If needed to skip the loading of a larger file, you have two options to restrict the file by importing into the spreadsheet and causing the server goes unresponsive. Those properties are.
+
+1.	MaximumDataLimit. ( Value set to the maximum data (cell) count allowed )
+2.	MaximumFileSize ( File size to be set in Byte )
+
+Enable this in the Open action on the server side, as shown below.
+
+```c#
+    public IActionResult Open([FromForm]IFormCollection openRequest)
+    {
+        OpenRequest open = new OpenRequest();
+        open.File = openRequest.Files[0];
+        // Data limit set to maximum limit.
+        open.ThresholdLimit.MaximumDataLimit = 1000000;
+        // For reference value has been set to 5MB limit.
+        open.ThresholdLimit.MaximumFileSize = 5000000;
+        var openbook = Content(Workbook.Open(open));
+        return openbook;
+    }      
+```
+
+The above set of logic will throw the alert dialog to skip the opening of larger size in spreadsheet. By clicking the Cancel button, it will skip the importing progress. And on clicking OK button, spreadsheet tries to load the file.
+
+> This feature is only applicable when importing an Excel file that contains data beyond the limitations allowed.
+
+![Import Alert Dialog](./images/import_alert_dialog%20.png)
+
 ## Save
 
 The Spreadsheet control saves its data, style, format, and more as Excel file document. To enable this feature, set [`allowSave`](../api/spreadsheet/#allowsave) as `true` and assign service url to the [`saveUrl`](../api/spreadsheet/#saveurl) property.
