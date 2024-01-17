@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Formulas in JavaScript Spreadsheet Control | Syncfusion
-description: Learn here all about formulas in Syncfusion Essential JavaScript Spreadsheet control, its elements and more.
+title: Formulas in ##Platform_Name## Spreadsheet Control | Syncfusion
+description: Learn here all about Formulas in Syncfusion Essential ##Platform_Name## Spreadsheet control, its elements and more.
 platform: ej2-javascript
 control: Formulas 
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Formulas in JavaScript Spreadsheet Control
+# Formulas in ##Platform_Name## Spreadsheet Control
 
 Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
 
