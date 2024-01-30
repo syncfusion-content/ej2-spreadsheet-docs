@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Formulas in ##Platform_Name## Spreadsheet control | Syncfusion
-description: Learn here all about Formulas in Syncfusion ##Platform_Name## Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Formulas in ##Platform_Name## Spreadsheet Control | Syncfusion
+description: Learn here all about Formulas in Syncfusion Essential ##Platform_Name## Spreadsheet control, its elements and more.
 platform: ej2-javascript
 control: Formulas 
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Formulas in ##Platform_Name## Spreadsheet control
+# Formulas in ##Platform_Name## Spreadsheet Control
 
 Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
 
@@ -238,7 +238,7 @@ If you enter an invalid formula in a cell, an error dialog with an error message
 | We found that you typed a formula with a circular reference | Occurs when passing a formula with circular cell reference. |
 | We found that you typed a formula which is invalid | Except in the cases mentioned above, all other errors will fall into this broad category. |
 
-![Formula Alert Dialog](./images/formula-alert-dialog.png)
+![Formula Alert Dialog in JavaScript Spreadsheet.](./images/javascript-spreadsheet-formula-alert-dialog.png)
 
 ## See Also
 
