@@ -41,6 +41,8 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
                     { text: 'XLS', iconCss: 'e-xls e-icons' }, { text: 'CSV', iconCss: 'e-csv e-icons' }]
             }],
             'Save As', false);
+        // Adding the new `custom dropdown button` in the ribbon toolbar item under the `Data` tab for adding a custom dropdown button using the addToolbarItems method in the spreadsheet ribbon.
+        spreadsheet.addToolbarItems('Data', [{ type: 'Separator' }, { id: 'custombtn', tooltipText: 'Custom Btn', template: appendDropdownBtn('custombtn') }], 7);
     },
     fileMenuBeforeOpen: function () {
         // Since the file menu items are created dynamically, so need to perform the hide/show and enable/disable operations
@@ -72,3 +74,23 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
 
 spreadsheet.appendTo('#spreadsheet');
 
+function appendDropdownBtn(id) {
+    let ddlItems = [
+        {
+            text: 'Download Excel',
+        },
+        {
+            text: 'Download CSV',
+        },
+    ];
+    let btnObj = new ej.splitbuttons.DropDownButton({
+        items: ddlItems,
+        content: 'Download',
+        iconCss: 'e-icons e-download',
+        select: function (args) {
+            alert(args.item.text + ' clicked');
+        },
+    });
+    btnObj.appendTo(ej.base.createElement('button', { id: id }));
+    return btnObj.element;
+}
