@@ -1,7 +1,10 @@
 
 
 import { Spreadsheet, SheetModel, ColumnModel, MenuSelectEventArgs } from '@syncfusion/ej2-spreadsheet';
-import { enableRipple, select } from '@syncfusion/ej2-base';
+import { ItemModel } from '@syncfusion/ej2-navigations/src/toolbar';
+import { DropDownButton } from '@syncfusion/ej2-splitbuttons/src/drop-down-button/drop-down-button';
+import { MenuEventArgs } from '@syncfusion/ej2-splitbuttons';
+import { enableRipple, select, createElement } from '@syncfusion/ej2-base';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data } from './datasource.ts';
 
@@ -48,6 +51,8 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
                     { text: 'XLS', iconCss: 'e-xls e-icons' }, { text: 'CSV', iconCss: 'e-csv e-icons' }]
             }],
             'Save As', false);
+        // Adding the new `custom dropdown button` in the ribbon toolbar item under the `Data` tab for adding a custom dropdown button using the addToolbarItems method in the spreadsheet ribbon.
+        spreadsheet.addToolbarItems('Data', [{ type: 'Separator' }, { id: 'custombtn', tooltipText: 'Custom Btn', template: appendDropdownBtn('custombtn') }], 7);
     },
     fileMenuBeforeOpen: (): void => {
         // Because the file menu items are created dynamically, you need to perform the hide or show and enable/disable operations
@@ -79,4 +84,25 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
 
 spreadsheet.appendTo('#spreadsheet');
 
+
+function appendDropdownBtn(id: string): HTMLElement {
+    let ddlItems: ItemModel[] = [
+        {
+            text: 'Download Excel',
+        },
+        {
+            text: 'Download CSV',
+        },
+    ];
+    let btnObj: DropDownButton = new DropDownButton({
+        items: ddlItems,
+        content: 'Download',
+        iconCss: 'e-icons e-download',
+        select: (args: MenuEventArgs): void => {
+            alert(args.item.text + ' clicked');
+        },
+    });
+    btnObj.appendTo(createElement('button', { id: id }));
+    return btnObj.element;
+}
 
