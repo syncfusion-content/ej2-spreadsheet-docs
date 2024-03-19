@@ -24,13 +24,13 @@ You can set formula for a cell in the following ways,
 
 ## Culture-Based Argument Separator
 
-Previously, although you could import culture-based Excel files into the Spreadsheet component, the formulas wouldn't calculate correctly. This was due to the absence of culture-based argument separators and support for culture-based formatted numeric values as arguments. However, starting from version 25.1.35, you can now import culture-based Excel files into the Spreadsheet component.
+Previously, although you could import culture-based Excel files into the Spreadsheet, the formulas wouldn't calculate correctly. This was due to the absence of culture-based argument separators and support for culture-based formatted numeric values as arguments. However, starting from version 25.1.35, you can now import culture-based Excel files into the Spreadsheet component.
 
-> Before importing culture-based Excel files, ensure that the Spreadsheet component is rendered with the corresponding culture. Additionally, launch the import/export services with the same culture to ensure compatibility.
+> Before importing culture-based Excel files, ensure that the Spreadsheet is rendered with the corresponding culture. Additionally, launch the import/export services with the same culture to ensure compatibility.
 
-When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [`listSeparator`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#listseparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [`listSeparator`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#listseparator) property will be updated based on the culture of the launched import/export service.
+When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [listSeparator](../api/spreadsheet/#listseparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [listSeparator](../api/spreadsheet/#listseparator) property will be updated based on the culture of the launched import/export service.
 
-In the example below, the Spreadsheet component is rendered with the `German culture (de-De)`. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
+In the example below, the Spreadsheet is rendered with the `German culture (de)`. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
 
 % if page.publishingplatform == "typescript" %}
 
