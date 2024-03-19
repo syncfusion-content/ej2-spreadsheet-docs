@@ -16,7 +16,7 @@ function loadCultureFiles() {
             } else {
                 console.error('Invalid responsetype received:', response);
             }
-            ej.base.setCulture('de'); // Change the Spreadsheet culture
+            ej.base.setCulture('de');
             ej.base.setCurrencyCode('EUR');
         };
         fetch.send();
@@ -36,12 +36,12 @@ function loadLocalizationData() {
 loadLocalizationData();
 
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
-    locale: 'de-DE',
+    locale: 'de',
+    listSeparator: ';',
     showSheetTabs: false,
     showRibbon: false,
     sheets: [{
-        name: 'Restaurant Invoice',
-        selectedRange: 'E15:E15',
+        selectedRange: 'E14',
         ranges: [{ dataSource: data }],
         rows: [{ index: 12, cells: [{ index: 3, value: 'Subtotal:' }, { formula: '=SUBTOTAL(9;E2:E12)' }] },
             { cells: [{ index: 3, value: 'Discount (8,5%):' }, { formula: '=PRODUCT(8,5;E13)/100' }] },

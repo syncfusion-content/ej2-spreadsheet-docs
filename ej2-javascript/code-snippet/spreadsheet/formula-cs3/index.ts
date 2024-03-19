@@ -8,24 +8,24 @@ import * as cagregorian from './ca-gregorian.json';
 import * as numbers from './numbers.json';
 import * as timeZoneNames from './timeZoneNames.json';
 import * as numberingSystems from './numberingSystems.json';
-import * as deLocalization from './locale.json';
+import * as deDELocalization from './locale.json';
 
 enableRipple(true);
 
 loadCldr(currencies, cagregorian, numbers, timeZoneNames, numberingSystems);
 
-setCulture('de-DE');
+setCulture('de');
 setCurrencyCode('EUR');
 
-L10n.load(deLocalization);
+L10n.load(deDELocalization);
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
-    locale: 'de-DE',
+    locale: 'de',
+    listSeparator: ';',
     showSheetTabs: false,
     showRibbon: false,
     sheets: [{
-        name: 'Restaurant Invoice',
-        selectedRange: 'E15:E15',
+        selectedRange: 'E14',
         ranges: [{ dataSource: data }],
         rows: [{ index: 12, cells: [{ index: 3, value: 'Subtotal:' }, { formula: '=SUBTOTAL(9;E2:E12)' }] },
             { cells: [{ index: 3, value: 'Discount (8,5%):' }, { formula: '=PRODUCT(8,5;E13)/100' }] },
