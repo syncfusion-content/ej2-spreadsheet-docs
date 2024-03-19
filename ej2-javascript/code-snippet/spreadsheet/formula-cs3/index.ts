@@ -1,5 +1,3 @@
-
-
 import { Spreadsheet, getFormatFromType } from '@syncfusion/ej2-spreadsheet';
 import { loadCldr, L10n, setCulture, setCurrencyCode, enableRipple } from '@syncfusion/ej2-base';
 import { data } from './datasource.ts';
