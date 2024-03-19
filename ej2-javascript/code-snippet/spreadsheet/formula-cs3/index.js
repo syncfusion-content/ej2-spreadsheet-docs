@@ -50,8 +50,8 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
     }],
     created: function () {
         spreadsheet.cellFormat({ textAlign: 'center', fontWeight: 'bold' }, 'A1:E1');
-        spreadsheet.numberFormat(getFormatFromType('Currency'), 'D2:E12');
-        spreadsheet.numberFormat(getFormatFromType('Currency'), 'E13:E15');
+        spreadsheet.numberFormat(ej.spreadsheet.getFormatFromType('Currency'), 'D2:E12');
+        spreadsheet.numberFormat(ej.spreadsheet.getFormatFromType('Currency'), 'E13:E15');
     }
 });
 
