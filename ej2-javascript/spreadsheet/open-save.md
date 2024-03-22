@@ -182,6 +182,45 @@ The following list of Excel file formats are supported in Spreadsheet:
 * Excel Macro-Enabled Workbook (.xlsm)
 * Excel Binary Workbook(.xlsb)
 
+### Load JSON data
+
+You can load the JSON data into the spreadsheet by using the [openFromJson](../api/spreadsheet/#openfromjson) method. The JSON data must look like the workbook object that the [saveAsJson](../api/spreadsheet/#saveasjson) method returns. **NOTE:** You can also create your own workbook object by using this [reference section](https://ej2.syncfusion.com/documentation/spreadsheet/how-to/create-a-object-structure). 
+
+If required, set the `triggerEvent` argument in the `openFromJson` method to `true` to trigger the `openComplete` event after the JSON is loaded into the spreadsheet UI.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/open-json/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/open-json/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.ts" %}
+{% include code-snippet/spreadsheet/open-json/datasource.ts %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/open-json" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/open-json/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/open-json/index.html %}
+{% endhighlight %}
+{% highlight ts tabtitle="es5-datasource.js" %}
+{% include code-snippet/spreadsheet/open-json/es5-datasource.js %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/spreadsheet/open-json" %}
+{% endif %}
+
 ## Save
 
 The Spreadsheet control saves its data, style, format, and more as Excel file document. To enable this feature, set [`allowSave`](../api/spreadsheet/#allowsave) as `true` and assign service url to the [`saveUrl`](../api/spreadsheet/#saveurl) property.
@@ -352,6 +391,39 @@ The following list of Excel file formats are supported in Spreadsheet:
 * MS Excel 97-2003 (.xls)
 * Comma Separated Values (.csv)
 * Portable Document Format (.pdf)
+
+### Save spreadsheet data as JSON
+
+You can save the spreadsheet data in JSON format using the [saveAsJson](../api/spreadsheet/#saveasjson) method. To reload the same into our spreadsheet, you can use the [openFromJson](../api/spreadsheet/#openfromjson) method.
+
+> You can also convert the resultant JSON object from the [saveAsJson](../api/spreadsheet/#saveasjson) method to a string and move it to any of the databases for later use. For more details, refer [here](https://support.syncfusion.com/kb/article/10357/how-to-save-and-retrieve-the-javascript-spreadsheet-data-as-json-in-database).
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/save-json/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/save-json/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/save-json" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/save-json/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/save-json/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/spreadsheet/save-json" %}
+{% endif %}
 
 ### Methods
 
