@@ -32,7 +32,7 @@ When loading spreadsheet data with culture-based formula argument separators usi
 
 In the example below, the Spreadsheet component is rendered with the `German culture (de)`. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
 
-% if page.publishingplatform == "typescript" %}
+{% if page.publishingplatform == "typescript" %}
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
